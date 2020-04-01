@@ -374,4 +374,4 @@ Client:on("messageCreate", function(message)
     end
 end)
 
-Client:run("Bot NjkzNDQ4MTUyMDY5NzAxNjUy.XoOdsw.gR6xm45Z9mEVlnb2UJ7pc81iMH8")
+Client:run("Bot ")
