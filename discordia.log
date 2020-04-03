@@ -2489,3 +2489,96 @@
 2020-04-01 22:02:44 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
 2020-04-01 22:02:46 | [INFO]    | Shard 0 : Received HELLO (["gateway-prd-main-bw7q",{"micros":0.0}])
 2020-04-01 22:02:59 | [INFO]    | Shard 0 : Received RESUMED (["gateway-prd-main-bw7q",{"micros":2948,"calls":["discord-sessions-prd-1-47",{"micros":72}]}])
+2020-04-01 22:10:07 | [INFO]    | Discordia 2.8.0
+2020-04-01 22:10:07 | [INFO]    | Connecting to Discord...
+2020-04-01 22:10:07 | [WARNING] | 429 - Too Many Requests : retrying after 276 ms : GET https://discordapp.com/api/v7/users/@me
+2020-04-01 22:10:08 | [ERROR]   | 401 - Unauthorized : GET https://discordapp.com/api/v7/users/@me
+2020-04-01 22:10:08 | [ERROR]   | Could not authenticate, check token: HTTP Error 0 : 401: Unauthorized
+2020-04-01 22:15:26 | [INFO]    | Discordia 2.8.0
+2020-04-01 22:15:26 | [INFO]    | Connecting to Discord...
+2020-04-01 22:15:26 | [INFO]    | Authenticated as S.U.L.I#1602
+2020-04-01 22:15:26 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-04-01 22:15:27 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-01 22:15:27 | [INFO]    | Shard 0 : Received HELLO
+2020-04-01 22:15:27 | [INFO]    | Shard 0 : Received READY
+2020-04-02 01:19:45 | [WARNING] | Shard 0 : 1001 - Connection closed
+2020-04-02 01:19:45 | [INFO]    | Shard 0 : Disconnected
+2020-04-02 01:19:45 | [INFO]    | Shard 0 : Reconnecting after 974 ms...
+2020-04-02 01:19:47 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-02 01:19:47 | [INFO]    | Shard 0 : Received HELLO
+2020-04-02 01:19:47 | [INFO]    | Shard 0 : Received RESUMED
+2020-04-02 02:35:05 | [INFO]    | Shard 0 : Disconnected
+2020-04-02 02:35:05 | [INFO]    | Shard 0 : Reconnecting after 1099 ms...
+2020-04-02 02:35:07 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-02 02:35:07 | [INFO]    | Shard 0 : Received HELLO
+2020-04-02 02:35:07 | [INFO]    | Shard 0 : Session invalidated, re-identifying...
+2020-04-02 02:35:08 | [INFO]    | Shard 0 : Received READY
+2020-04-03 02:03:48 | [INFO]    | Shard 0 : Disconnected
+2020-04-03 02:03:48 | [INFO]    | Shard 0 : Reconnecting after 1021 ms...
+2020-04-03 02:03:49 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-03 02:03:49 | [INFO]    | Shard 0 : Received HELLO
+2020-04-03 02:03:50 | [INFO]    | Shard 0 : Received RESUMED
+2020-04-03 03:30:47 | [INFO]    | Shard 0 : Disconnected
+2020-04-03 03:30:47 | [INFO]    | Shard 0 : Reconnecting after 952 ms...
+2020-04-03 03:30:48 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-03 03:30:48 | [INFO]    | Shard 0 : Received HELLO
+2020-04-03 03:30:48 | [INFO]    | Shard 0 : Received RESUMED
+2020-04-03 04:03:54 | [INFO]    | Shard 0 : Disconnected
+2020-04-03 04:03:54 | [INFO]    | Shard 0 : Reconnecting after 1044 ms...
+2020-04-03 04:03:56 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-03 04:03:56 | [INFO]    | Shard 0 : Received HELLO
+2020-04-03 04:03:56 | [INFO]    | Shard 0 : Received RESUMED
+2020-04-03 06:18:53 | [WARNING] | Shard 0 : Discord has requested a reconnection
+2020-04-03 06:18:53 | [INFO]    | Shard 0 : Disconnected
+2020-04-03 06:18:53 | [INFO]    | Shard 0 : Reconnecting...
+2020-04-03 06:18:53 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-03 06:18:53 | [INFO]    | Shard 0 : Received HELLO
+2020-04-03 06:18:53 | [INFO]    | Shard 0 : Received READY
+2020-04-03 07:29:57 | [INFO]    | Shard 0 : Disconnected
+2020-04-03 07:29:57 | [INFO]    | Shard 0 : Reconnecting after 1031 ms...
+2020-04-03 07:29:58 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-03 07:29:58 | [INFO]    | Shard 0 : Received HELLO
+2020-04-03 07:29:58 | [INFO]    | Shard 0 : Session invalidated, re-identifying...
+2020-04-03 07:30:00 | [INFO]    | Shard 0 : Received READY
+2020-04-03 08:35:04 | [WARNING] | Shard 0 : Discord has requested a reconnection
+2020-04-03 08:35:04 | [INFO]    | Shard 0 : Disconnected
+2020-04-03 08:35:04 | [INFO]    | Shard 0 : Reconnecting...
+2020-04-03 08:35:04 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-03 08:35:04 | [INFO]    | Shard 0 : Received HELLO
+2020-04-03 08:35:04 | [INFO]    | Shard 0 : Received READY
+2020-04-03 08:55:59 | [WARNING] | Shard 0 : Discord has requested a reconnection
+2020-04-03 08:55:59 | [INFO]    | Shard 0 : Disconnected
+2020-04-03 08:55:59 | [INFO]    | Shard 0 : Reconnecting...
+2020-04-03 08:55:59 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-03 08:55:59 | [INFO]    | Shard 0 : Received HELLO
+2020-04-03 08:55:59 | [INFO]    | Shard 0 : Received READY
+2020-04-03 09:53:57 | [WARNING] | Shard 0 : Discord has requested a reconnection
+2020-04-03 09:53:57 | [INFO]    | Shard 0 : Disconnected
+2020-04-03 09:53:57 | [INFO]    | Shard 0 : Reconnecting...
+2020-04-03 09:53:58 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-03 09:53:58 | [INFO]    | Shard 0 : Received HELLO
+2020-04-03 09:53:58 | [INFO]    | Shard 0 : Received READY
+2020-04-03 11:18:51 | [WARNING] | Shard 0 : Discord has requested a reconnection
+2020-04-03 11:18:51 | [INFO]    | Shard 0 : Disconnected
+2020-04-03 11:18:51 | [INFO]    | Shard 0 : Reconnecting...
+2020-04-03 11:18:51 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-03 11:18:51 | [INFO]    | Shard 0 : Received HELLO
+2020-04-03 11:18:52 | [INFO]    | Shard 0 : Received READY
+2020-04-03 14:42:23 | [WARNING] | Shard 0 : 1001 - Connection closed
+2020-04-03 14:42:23 | [INFO]    | Shard 0 : Disconnected
+2020-04-03 14:42:23 | [INFO]    | Shard 0 : Reconnecting after 951 ms...
+2020-04-03 14:42:25 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-03 14:42:25 | [INFO]    | Shard 0 : Received HELLO
+2020-04-03 14:42:25 | [INFO]    | Shard 0 : Received RESUMED
+2020-04-03 16:24:19 | [WARNING] | Shard 0 : Discord has requested a reconnection
+2020-04-03 16:24:19 | [INFO]    | Shard 0 : Disconnected
+2020-04-03 16:24:19 | [INFO]    | Shard 0 : Reconnecting...
+2020-04-03 16:24:19 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-03 16:24:19 | [INFO]    | Shard 0 : Received HELLO
+2020-04-03 16:24:19 | [INFO]    | Shard 0 : Received READY
+2020-04-03 20:15:37 | [WARNING] | Shard 0 : Discord has requested a reconnection
+2020-04-03 20:15:37 | [INFO]    | Shard 0 : Disconnected
+2020-04-03 20:15:37 | [INFO]    | Shard 0 : Reconnecting...
+2020-04-03 20:15:37 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-04-03 20:15:37 | [INFO]    | Shard 0 : Received HELLO
+2020-04-03 20:15:38 | [INFO]    | Shard 0 : Received READY
