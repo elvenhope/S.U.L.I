@@ -3,7 +3,7 @@ local sql = require("sqlite3")
 local Client = discordia.Client()
 
 local db = sql.open("Brain.db")
-local SQLCOMMAND
+local SQLCOMMAND,InVoiceChannel,Connection
 Client:on("ready", function()
     print("Logged in As : " .. Client.user.username)
 
@@ -16,19 +16,63 @@ Client:on("ready", function()
     
     
 end)
-
-
-function getKeysSortedByValue(tbl, sortFunction)
-    local keys = {}
-    for key in pairs(tbl) do
-        table.insert(keys, key)
+function PadSpacesInSentence(Sentence)
+    local Counter = 1
+    local Result = ""
+    while Counter <= #Sentence do
+        local Character = Sentence:sub(Counter,Counter)
+        if(Character ~= " ") then
+            Result = Result .. Character
+        else
+            Result = Result .. "  "
+        end
+        Counter = Counter + 1
     end
-    table.sort(keys, function(a, b) return sortFunction(tbl[a], tbl[b]) end)
-    return keys
+    return Result
+end
+
+function FixWords(Sentence)
+    local Counter = 1
+    local Result = ""
+    while Counter <= #Sentence do
+        local Character = Sentence:sub(Counter,Counter)
+        if(Character == " " and string.byte(Sentence:sub(Counter+1,Counter+1)) ~= nil) then
+            if(string.byte(Sentence:sub(Counter+1,Counter+1)) == 115 or string.byte(Sentence:sub(Counter+1,Counter+1)) == 116) then
+                if(Sentence:sub(Counter+2,Counter+2) == " " or Sentence:sub(Counter+2,Counter+2) == nil) then
+                    Result = Result .."'".. Sentence:sub(Counter+1,Counter+1) .. " "
+                    Counter = Counter + 1
+                else
+                    Result = Result .. Character
+                end
+            else
+                Result = Result .. Character
+            end
+        else
+            Result = Result .. Character
+        end
+        Counter = Counter + 1
+    end
+    return Result
+end
+
+function GetVoice(Sentence,Channel)
+    if(InVoiceChannel == 1) then
+        --Sentence = PadSpacesInSentence(Sentence)
+        Sentence,N = string.gsub(Sentence,"nyah","[[n:i:aaah]]")
+        Sentence,N = string.gsub(Sentence,"suli","[[s:a:l:i]]")
+        Sentence,N = string.gsub(Sentence,"s u l i","[[s:a:l:i]]")
+        Sentence,N = string.gsub(Sentence,"baka","[[b:a:kaa]]")
+        Sentence = FixWords(Sentence)
+        print(Sentence)
+        os.execute("espeak -v ko+f4 -w 'voice.wav' -p 99 -s 130 -k 20 -z \"" .. Sentence .. "\"")
+        Channel:send{
+            file = "voice.wav"
+        }
+    end
 end
 
 Client:on("messageCreate", function(message)
-    if(string.sub(message.content,1,1) ~= "[") then
+    if(string.sub(message.content,1,1) ~= "[" and message.channel.guild ~= nil) then
         Words = {}
         for Word in message.cleanContent:gmatch("%w+") do
             Word = string.lower(Word)
@@ -137,7 +181,11 @@ Client:on("messageCreate", function(message)
             print("TURN END")
             i = i + 1
         end
-        message.channel:send(Sentence)
+        if(InVoiceChannel == nil) then
+            message.channel:send(Sentence)
+        else
+            GetVoice(Sentence,message.channel)
+        end
     end
 end)
 
@@ -369,9 +417,39 @@ Client:on("messageCreate", function(message)
                 SentenceString = SentenceString .. Sentence[m] .. " "
             end 
             print("SENTENCE:" .. SentenceString)
-            message.channel:send(SentenceString)
+            if(InVoiceChannel == nil) then
+                message.channel:send(SentenceString)
+            else
+                GetVoice(SentenceString,message.channel)
+            end
         end
     end
 end)
 
-Client:run("Bot NjkzNDQ4MTUyMDY5NzAxNjUy.XoTZLQ.Z4v2IQFhTDWh3pnCD2qa8cJWVy8")
+
+--[[
+Client:on("messageCreate", function(message)
+    if(string.sub(message.content,1,1) == "[" and string.lower(string.sub(message.content,2,5)) == "join") then
+        local VoiceChannelID = string.sub(message.content,7,#message.content)
+        local Channel = Client:getChannel(VoiceChannelID)
+        Connection = Channel:join()
+        if(Connection == nil) then
+            InVoiceChannel = nil 
+        else
+            InVoiceChannel = 1
+        end
+    end
+    if(string.sub(message.content,1,1) == "[" and string.lower(string.sub(message.content,2,5)) == "quit") then
+        if(Connection ~= nil) then
+            Connection:close()
+            InVoiceChannel = nil
+            Connection = nil
+        else
+            message.channel:send("I am not in a voice channel")
+        end
+    end
+end)
+]]
+
+
+Client:run("Bot NjkzNDQ4MTUyMDY5NzAxNjUy.Xn9N6w.BYan659iOfbUVEeLR26P4qHUFRI")
