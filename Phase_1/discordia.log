@@ -1,0 +1,7 @@
+2020-09-02 15:14:10 | [INFO]    | Discordia 2.6.0
+2020-09-02 15:14:10 | [INFO]    | Connecting to Discord...
+2020-09-02 15:14:12 | [INFO]    | Authenticated as S.U.L.I#1602
+2020-09-02 15:14:12 | [INFO]    | Launching shard 0 (1 out of 1)...
+2020-09-02 15:14:12 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2020-09-02 15:14:12 | [INFO]    | Shard 0 : Received HELLO (["gateway-prd-main-ht2s",{"micros":0.0}])
+2020-09-02 15:14:13 | [INFO]    | Shard 0 : Received READY (["gateway-prd-main-ht2s",{"micros":105234,"calls":["discord-sessions-prd-2-12",{"micros":100583,"calls":["start_session",{"micros":73770,"calls":["api-prd-main-1ljl",{"micros":67730,"calls":["get_user",{"micros":7887},"add_authorized_ip",{"micros":3778},"get_guilds",{"micros":20297},"coros_wait",{"micros":0}]}]},"guilds_connect",{"micros":5,"calls":[]},"presence_connect",{"micros":5186,"calls":[]}]}]}])

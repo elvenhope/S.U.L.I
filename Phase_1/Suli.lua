@@ -16,6 +16,27 @@ Client:on("ready", function()
     
     
 end)
+
+function script_path()
+    local str = debug.getinfo(2, "S").source:sub(2)
+    return str:match("(.*/)")
+end 
+
+function ReadFile(File)
+    local path = script_path() .. "/" .. File
+    local file, errorString = io.open( path, "r" )
+    local contents
+
+    if not file then
+        print( "File error: " .. errorString )
+    else
+        contents = file:read( "*a" )
+        io.close( file )
+    end
+    file = nil
+    return contents
+end
+
 function PadSpacesInSentence(Sentence)
     local Counter = 1
     local Result = ""
@@ -451,5 +472,4 @@ Client:on("messageCreate", function(message)
 end)
 ]]
 
-
-Client:run("Bot NjkzNDQ4MTUyMDY5NzAxNjUy.Xn9N6w.BYan659iOfbUVEeLR26P4qHUFRI")
+Client:run("Bot " .. ReadFile("../env.txt"))
